@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Nibblelaxy - Green AI Monitor",
+  "version": "1.0",
+  "description": "Monitorea el consumo hídrico y ambiental de tus consultas de Inteligencia Artificial.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://gemini.google.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
